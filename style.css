@@ -1,0 +1,119 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Barra azul estilo PayPal */
+.top-banner {
+  width: 100%;
+  background-color: #0070ba; /* Azul PayPal */
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.top-banner a.banner-link {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+.top-banner a.banner-link:hover {
+  text-decoration: none;
+}
+
+/* Cabeçalho */
+.site-header {
+  width: 100%;
+  background-color: #ffffff;       /* fundo branco; muda se preferires escuro */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+/* Logotipo */
+.logo img {
+  height: 50px;  /* ajusta conforme o tamanho do teu logo */
+}
+
+/* Menu normal (desktop) */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 8px 0;
+  transition: color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+  color: #007acc;  /* cor de destaque -- podes mudar para as cores do teu site */
+}
+
+/* Hamburger (menu mobile) */
+.hamburger {
+  display: none; /* só aparece em mobile */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 70px;  /* altura do cabeçalho */
+    right: -100%;  /* fora da tela inicialmente */
+    background: #ffffff;
+    width: 200px;
+    height: calc(100vh - 70px);
+    transition: right 0.3s ease;
+  }
+
+  .nav-menu.open {
+    right: 0; /* mostra o menu */
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
