@@ -23,7 +23,7 @@ body {
 .top-banner a.banner-link {
   color: #ffffff;
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
   margin-left: 5px;
 }
 
