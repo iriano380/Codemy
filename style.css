@@ -34,7 +34,7 @@ body {
 /* Cabeçalho */
 .site-header {
   width: 100%;
-  background-color: #ffffff;       /* fundo branco; muda se preferires escuro */
+  background-color: yellow;       /* fundo branco; muda se preferires escuro */
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
@@ -53,7 +53,7 @@ body {
 
 /* Logotipo */
 .logo img {
-  height: 50px;  /* ajusta conforme o tamanho do teu logo */
+  height: 30px;  /* ajusta conforme o tamanho do teu logo */
 }
 
 /* Menu normal (desktop) */
